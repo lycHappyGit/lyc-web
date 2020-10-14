@@ -1,0 +1,22 @@
+server:
+  servlet:
+    context-path: /kafka-test
+spring:
+  kafka:
+    bootstrap-servers: 172.21.1.152:9092
+    listener:
+      missing-topics-fatal: false
+    producer:
+      retries: 1
+      batch-size: 16348
+      buffer-memory: 335554432
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      transaction-id-prefix: kafka_tx
+    consumer:
+      group-id: lyc-group
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      auto-commit-interval: 100
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

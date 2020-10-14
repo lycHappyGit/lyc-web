@@ -1,0 +1,16 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8080/eureka/
+server:
+  port: 8081
+spring:
+  application:
+    name: lyc-provider
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
