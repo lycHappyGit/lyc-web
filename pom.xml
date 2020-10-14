@@ -9,6 +9,23 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.1.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <modules>
+        <module>lyc-eureka</module>
+        <module>lyc-gateway</module>
+        <module>lyc-kafka</module>
+        <module>lyc-web1</module>
+        <module>lyc-web2</module>
+        <module>lyc-web3</module>
+
+    </modules>
+
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
